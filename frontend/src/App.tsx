@@ -5,10 +5,12 @@ import NotFoundPage from "./pages/NotFound";
 function App() {
 	return (
 		<>
-			<Routes>
-				<Route path="/" element={<HomePage />} />
-				<Route path="/*" element={<NotFoundPage />} />
-			</Routes>
+			<div className="bg-[#FFFCF5]">
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/*" element={<NotFoundPage />} />
+				</Routes>
+			</div>
 		</>
 	);
 }
