@@ -1,5 +1,4 @@
 import JattLogo from "../assets/jatt-light.svg";
-import { Link } from "react-router";
 import { Button } from "./ui/button";
 import HoverItem from "./HoverItem";
 import { MoonStar } from "lucide-react";
@@ -8,9 +7,9 @@ const Header = () => {
 	return (
 		<>
 			<header className="h-50 flex justify-between items-center">
-				<Link to="#profile">
+				<a href="#profile">
 					<img src={JattLogo} width={60} alt="Jati Sri Pamungkas" />
-				</Link>
+				</a>
 				<nav className="flex items-center gap-10">
 					<Button
 						size="icon"

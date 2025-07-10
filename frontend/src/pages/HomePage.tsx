@@ -1,6 +1,8 @@
 import Profile from "@/components/Profile";
 import Header from "@/components/Header";
 import Skills from "@/components/Skills";
+import Education from "@/components/Education";
+import Projects from "@/components/Projects";
 
 const HomePage = () => {
 	return (
@@ -9,6 +11,8 @@ const HomePage = () => {
 				<Header />
 				<Profile />
 				<Skills />
+				<Education />
+				<Projects />
 			</div>
 		</>
 	);

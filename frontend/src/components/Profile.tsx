@@ -10,7 +10,7 @@ const Profile = () => {
 			<main className="mt-6 flex flex-col gap-8">
 				<div className="flex justify-between">
 					<div className="w-[50%] flex flex-col justify-evenly gap-8">
-						<h1 id="#profile" className="font-bold text-6xl">
+						<h1 id="profile" className="font-bold text-6xl leading-tight">
 							Hey There,{" "}
 							<span className="text-jati-1">
 								<br />
