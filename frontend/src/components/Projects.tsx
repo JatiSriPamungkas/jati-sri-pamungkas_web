@@ -1,7 +1,7 @@
 import TaskMaster from "../assets/task-master.png";
 import HunterRise from "../assets/hunter-rise.png";
 import ProjectCard from "./ProjectCard";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 type ProjectsSchema = {

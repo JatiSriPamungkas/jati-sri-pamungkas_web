@@ -8,7 +8,7 @@ import ExpressLogo from "../assets/ExpressJS.png";
 import NodeJSLogo from "../assets/NodeJS.png";
 import PostgreeSQL from "../assets/PostgreSQL.png";
 import GithubGit from "../assets/Github_Git.png";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 type SkillsSchema = {
