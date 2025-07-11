@@ -17,7 +17,7 @@ const Skills = () => {
 					id="skills"
 					className="mt-40 flex justify-center text-5xl font-bold gap-2 tracking-wider"
 				>
-					My <span className="bg-jati-1 px-2 p-1 rounded-[5px] text-white">Skills</span>
+					My <span className="bg-jati-1 px-2 py-1 rounded-[5px] text-white">Skills</span>
 				</h1>
 
 				<div className="mt-16 grid grid-cols-3 gap-16">

@@ -5,8 +5,8 @@ const ActionButton = ({ type, children }: { type: string; children: React.ReactN
 	const getStyle = ({ typeStyle }: { typeStyle: string }) => {
 		const styleString =
 			typeStyle == "cta"
-				? "w-40 h-15 bg-jati-1 cursor-pointer hover:bg-jati-5"
-				: "w-15 h-15 bg-transparent text-jati-3 border-2 border-jati-3 cursor-pointer hover:bg-jati-5 hover:border-jati-5 hover:text-white";
+				? "w-40 h-15 bg-jati-1 cursor-pointer hover:bg-jati-5 active:bg-jati-5"
+				: "w-15 h-15 bg-transparent text-jati-3 border-2 border-jati-3 cursor-pointer hover:bg-jati-5 hover:border-jati-5 hover:text-white active:bg-jati-1 active:text-white active:border-jati-1";
 
 		return styleString;
 	};

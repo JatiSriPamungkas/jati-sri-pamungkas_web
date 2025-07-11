@@ -20,7 +20,7 @@ const Education = () => {
 					</div>
 				</div>
 
-				<div>
+				<div className="flex flex-col items-end">
 					<h1 className="text-5xl font-bold tracking-wider">
 						<span className="bg-jati-1 rounded-[5px] text-white">Organiz</span>ation
 					</h1>
