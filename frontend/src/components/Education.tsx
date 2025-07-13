@@ -16,12 +16,12 @@ const Education = () => {
 	const API_URL_EDUCATION =
 		process.env.NODE_ENV === "production"
 			? "/api/education"
-			: "http://localhost:3000/api/education";
+			: "https://jati-sri-pamungkasweb-production.up.railway.app/api/education";
 
 	const API_URL_ORGANIZATIONS =
 		process.env.NODE_ENV === "production"
 			? "/api/organizations"
-			: "http://localhost:3000/api/organizations";
+			: "https://jati-sri-pamungkasweb-production.up.railway.app/api/organizations";
 
 	const fetchEducationHistory = useCallback(async () => {
 		try {

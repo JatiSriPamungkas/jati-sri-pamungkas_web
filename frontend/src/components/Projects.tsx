@@ -16,7 +16,7 @@ const Projects = () => {
 	const API_URL =
 		process.env.NODE_ENV === "production"
 			? "/api/projects"
-			: "http://localhost:3000/api/projects";
+			: "https://jati-sri-pamungkasweb-production.up.railway.app/api/projects";
 
 	const fetchProjects = useCallback(async () => {
 		try {

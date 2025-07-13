@@ -12,7 +12,9 @@ type SkillsSchema = {
 const Skills = () => {
 	const [skills, setSkills] = useState<SkillsSchema[]>([]);
 	const API_URL =
-		process.env.NODE_ENV === "production" ? "/api/skills" : "http://localhost:3000/api/skills";
+		process.env.NODE_ENV === "production"
+			? "/api/skills"
+			: "https://jati-sri-pamungkasweb-production.up.railway.app/api/skills";
 
 	const fetchSkills = useCallback(async () => {
 		try {
