@@ -1,10 +1,9 @@
-import TaskMaster from "../assets/task-master.png";
-import HunterRise from "../assets/hunter-rise.png";
 import ProjectCard from "./ProjectCard";
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 type ProjectsSchema = {
+	id: number;
 	title: string;
 	image: string;
 	description: string;
@@ -41,37 +40,15 @@ const Projects = () => {
 				</h1>
 
 				<div className="grid p-4">
-					<ProjectCard
-						urlImage={TaskMaster}
-						title="Task Master"
-						techTags={["React", "Express JS", "MySQL"]}
-					>
-						Task Master is a minimalistic and user-friendly task management application
-						designed to help users organize and prioritize their daily activities with
-						ease. Unlike gamified versions, Task Master focuses on simplicity, clarity,
-						and efficiency.
-					</ProjectCard>
-					<ProjectCard
-						urlImage={HunterRise}
-						title="Hunter Rise"
-						techTags={["Next JS", "Express JS", "MySQL"]}
-					>
-						Hunter Rise is a gamified task management app designed to make your daily
-						productivity feel like leveling up in a fantasy RPG world. Inspired by the
-						popular manhwa Solo Leveling, you don&apos;t just complete tasks — you
-						complete quests as a Hunter.
-					</ProjectCard>
-
-					{/* Praktikum */}
-					{projects.map((item, index) => {
+					{projects.map((project) => {
 						return (
 							<ProjectCard
-								key={index}
-								urlImage={item.link}
-								title={item.title}
-								techTags={item.tech}
+								key={project.id}
+								urlImage={project.image}
+								title={project.title}
+								techTags={project.tech}
 							>
-								{item.description}
+								{project.description}
 							</ProjectCard>
 						);
 					})}

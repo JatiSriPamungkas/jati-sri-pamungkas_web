@@ -69,6 +69,14 @@ const educations = [
 	},
 ];
 
+const organizations = [
+	{
+		institution: "English Fun Club (EFC)",
+		major: "Security Department",
+		period: "2020 - 2023",
+	},
+];
+
 const projects = [
 	{
 		title: "Task Master",
@@ -88,4 +96,4 @@ const projects = [
 	},
 ];
 
-module.exports = { educations, skills, projects };
+module.exports = { educations, organizations, skills, projects };

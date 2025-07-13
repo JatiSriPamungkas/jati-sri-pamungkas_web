@@ -4,10 +4,11 @@ require("dotenv").config({
 });
 
 const { sql } = require("@vercel/postgres");
-const { skills, educations, projects } = require("./data.js");
+const { skills, educations, organizations, projects } = require("./data.js");
 async function seed() {
 	try {
 		await sql`CREATE TABLE IF NOT EXISTS education (id SERIAL PRIMARY KEY, institution VARCHAR(255), major VARCHAR(255), period VARCHAR(255));`;
+		await sql`CREATE TABLE IF NOT EXISTS organizations (id SERIAL PRIMARY KEY, institution VARCHAR(255), major VARCHAR(255), period VARCHAR(255));`;
 		await sql`CREATE TABLE IF NOT EXISTS skills (id SERIAL PRIMARY KEY, title VARCHAR(255), description VARCHAR(255), src VARCHAR(255));`;
 		await sql`CREATE TABLE IF NOT EXISTS projects (id SERIAL PRIMARY KEY, title VARCHAR(255), image VARCHAR(255), description TEXT, tech VARCHAR(255)[], link VARCHAR(255));`;
 		console.log("Tabel berhasil dibuat.");
@@ -15,6 +16,12 @@ async function seed() {
 			educations.map(
 				(e) =>
 					sql`INSERT INTO education (institution, major, period) VALUES (${e.institution}, ${e.major}, ${e.period});`
+			)
+		);
+		await Promise.all(
+			organizations.map(
+				(e) =>
+					sql`INSERT INTO organizations (institution, major, period) VALUES (${e.institution}, ${e.major}, ${e.period});`
 			)
 		);
 		await Promise.all(

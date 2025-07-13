@@ -3,6 +3,7 @@ import axios from "axios";
 import EducationCard from "./EducationCard";
 
 type EducationSchema = {
+	id: number;
 	institution: string;
 	major: string;
 	period: string;
@@ -10,24 +11,40 @@ type EducationSchema = {
 
 const Education = () => {
 	const [educationHistory, setEducationHistory] = useState<EducationSchema[]>([]);
+	const [organizationHistory, setOrganizationHistory] = useState<EducationSchema[]>([]);
 
-	const API_URL =
+	const API_URL_EDUCATION =
 		process.env.NODE_ENV === "production"
 			? "/api/education"
 			: "http://localhost:3000/api/education";
 
+	const API_URL_ORGANIZATIONS =
+		process.env.NODE_ENV === "production"
+			? "/api/organizations"
+			: "http://localhost:3000/api/organizations";
+
 	const fetchEducationHistory = useCallback(async () => {
 		try {
-			const response = await axios.get(API_URL);
+			const response = await axios.get(API_URL_EDUCATION);
 			setEducationHistory(response.data);
 		} catch (error) {
 			console.error("Gagal mengambil data pendidikan:", error);
 		}
-	}, [API_URL]);
+	}, [API_URL_EDUCATION]);
+
+	const fetchOrganizationHistory = useCallback(async () => {
+		try {
+			const response = await axios.get(API_URL_ORGANIZATIONS);
+			setOrganizationHistory(response.data);
+		} catch (error) {
+			console.error("Gagal mengambil data pendidikan:", error);
+		}
+	}, [API_URL_ORGANIZATIONS]);
 
 	useEffect(() => {
 		fetchEducationHistory();
-	}, [fetchEducationHistory]);
+		fetchOrganizationHistory();
+	}, [fetchEducationHistory, fetchOrganizationHistory]);
 
 	return (
 		<>
@@ -38,36 +55,16 @@ const Education = () => {
 						cation
 					</h1>
 
-					{educationHistory.map((item, index) => {
+					{educationHistory.map((education) => {
 						return (
-							<div
-								key={index}
-								className="mt-12 flex flex-col w-150 h-60 border-2 items-center justify-evenly font-semibold text-2xl rounded-[10px] shadow-[4px_4px_15px_3px_rgba(0,0,0,0.25)]"
-							>
-								<h1 className="text-4xl text-jati-1 font-bold">
-									{item.institution}
-								</h1>
-								<h1>{item.major}</h1>
-								<h1>{item.period}</h1>
-							</div>
+							<EducationCard
+								key={education.id}
+								period={education.period}
+								institution={education.institution}
+								major={education.major}
+							/>
 						);
 					})}
-
-					<EducationCard
-						period="2023 - NOW"
-						institution="University of AMIKOM Yogyakarta"
-						major="S1 - Informatics"
-					/>
-					<EducationCard
-						period="2020 - 2023"
-						institution="SMA Negeri 1 Simo"
-						major="MIPA"
-					/>
-					<EducationCard
-						period="2017 - 2020"
-						institution="SMPIT Al-Falaah Simo"
-						major="Quran & Hadits"
-					/>
 				</div>
 
 				<div className="flex flex-col">
@@ -75,12 +72,16 @@ const Education = () => {
 						<span className="bg-jati-1 rounded-[5px] text-white">Organiz</span>
 						ation
 					</h1>
-
-					<EducationCard
-						period="2023"
-						institution="English Fun Club (EFC)"
-						major="Security Department"
-					/>
+					{organizationHistory.map((organization) => {
+						return (
+							<EducationCard
+								key={organization.id}
+								period={organization.period}
+								institution={organization.institution}
+								major={organization.major}
+							/>
+						);
+					})}
 				</div>
 			</div>
 		</>

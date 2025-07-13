@@ -28,7 +28,7 @@ const Header = () => {
 					<div className="flex gap-8">
 						<Button
 							size="icon"
-							className="bg-transparent text-jati-3 p-2 cursor-pointer hover:bg-transparent"
+							className="bg-transparent shadow-none text-jati-3 p-2 cursor-pointer hover:bg-transparent active:bg-jati-3 active:text-white"
 						>
 							<MoonStar className="!w-7 !h-7" />
 						</Button>
