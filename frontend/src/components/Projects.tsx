@@ -13,19 +13,17 @@ type ProjectsSchema = {
 
 const Projects = () => {
 	const [projects, setProjects] = useState<ProjectsSchema[]>([]);
-	const API_URL =
-		process.env.NODE_ENV === "production"
-			? "/api/projects"
-			: "https://jati-sri-pamungkasweb-production.up.railway.app/api/projects";
 
 	const fetchProjects = useCallback(async () => {
 		try {
-			const response = await axios.get(API_URL);
+			const response = await axios.get(
+				"https://jati-sri-pamungkasweb-production.up.railway.app/api/projects"
+			);
 			setProjects(response.data); // Menyimpan data proyek ke state
 		} catch (error) {
 			console.error("Gagal mengambil data proyek:", error);
 		}
-	}, [API_URL]);
+	}, []);
 
 	useEffect(() => {
 		fetchProjects();

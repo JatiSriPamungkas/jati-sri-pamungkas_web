@@ -11,19 +11,17 @@ type SkillsSchema = {
 
 const Skills = () => {
 	const [skills, setSkills] = useState<SkillsSchema[]>([]);
-	const API_URL =
-		process.env.NODE_ENV === "production"
-			? "/api/skills"
-			: "https://jati-sri-pamungkasweb-production.up.railway.app/api/skills";
 
 	const fetchSkills = useCallback(async () => {
 		try {
-			const response = await axios.get(API_URL);
+			const response = await axios.get(
+				"https://jati-sri-pamungkasweb-production.up.railway.app/api/skills"
+			);
 			setSkills(response.data);
 		} catch (error) {
 			console.error("Gagal mengambil data skill:", error);
 		}
-	}, [API_URL]);
+	}, []);
 
 	useEffect(() => {
 		fetchSkills();

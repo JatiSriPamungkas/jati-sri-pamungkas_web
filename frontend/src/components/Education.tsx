@@ -13,34 +13,28 @@ const Education = () => {
 	const [educationHistory, setEducationHistory] = useState<EducationSchema[]>([]);
 	const [organizationHistory, setOrganizationHistory] = useState<EducationSchema[]>([]);
 
-	const API_URL_EDUCATION =
-		process.env.NODE_ENV === "production"
-			? "/api/education"
-			: "https://jati-sri-pamungkasweb-production.up.railway.app/api/education";
-
-	const API_URL_ORGANIZATIONS =
-		process.env.NODE_ENV === "production"
-			? "/api/organizations"
-			: "https://jati-sri-pamungkasweb-production.up.railway.app/api/organizations";
-
 	const fetchEducationHistory = useCallback(async () => {
 		try {
-			const response = await axios.get(API_URL_EDUCATION);
+			const response = await axios.get(
+				"https://jati-sri-pamungkasweb-production.up.railway.app/api/education"
+			);
 			setEducationHistory(response.data);
 		} catch (error) {
 			console.error("Gagal mengambil data pendidikan:", error);
 		}
-	}, [API_URL_EDUCATION]);
+	}, []);
 
 	const fetchOrganizationHistory = useCallback(async () => {
 		try {
-			const response = await axios.get(API_URL_ORGANIZATIONS);
+			const response = await axios.get(
+				"https://jati-sri-pamungkasweb-production.up.railway.app/api/organizations"
+			);
 			console.log(response.data);
 			setOrganizationHistory(response.data);
 		} catch (error) {
 			console.error("Gagal mengambil data pendidikan:", error);
 		}
-	}, [API_URL_ORGANIZATIONS]);
+	}, []);
 
 	useEffect(() => {
 		fetchEducationHistory();
