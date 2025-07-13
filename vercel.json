@@ -4,21 +4,9 @@
 		{
 			"src": "frontend/package.json",
 			"use": "@vercel/static-build",
-			"config": { "distDir": "dist" }
-		},
-		{
-			"src": "backend/index.js",
-			"use": "@vercel/node"
-		}
-	],
-	"rewrites": [
-		{
-			"source": "/api/:path*",
-			"destination": "/backend/index.js"
-		},
-		{
-			"source": "/((?!api/|.*\\..*).*)",
-			"destination": "/index.html"
+			"config": {
+				"distDir": "dist"
+			}
 		}
 	]
 }
