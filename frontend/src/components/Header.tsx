@@ -1,8 +1,9 @@
-import JattLogo from "../assets/jatt-light.svg";
+import JattLogo from "../assets/jatt-light-no-bg.png";
 import { Button } from "./ui/button";
 import { Menu, MoonStar } from "lucide-react";
 import ListHoverNavbar from "./ListHoverNavbar";
 import { useState } from "react";
+import { Link } from "react-router";
 
 const Header = () => {
 	const [isShow, setIsShow] = useState<boolean>(false);
@@ -11,11 +12,11 @@ const Header = () => {
 		<>
 			<header
 				className={`${
-					isShow ? "h-110" : "h-25"
-				} border-b-2 flex flex-col justify-between p-8 transition-all overflow-hidden`}
+					isShow ? "h-110" : "h-30"
+				} border-b-2 flex flex-col justify-between px-8 py-6 transition-all duration-500 overflow-hidden`}
 			>
-				<div className="w-full flex justify-between items-center">
-					<a href="#profile">
+				<div className="w-full flex justify-between items-center mb-8">
+					<Link to="/">
 						<img
 							id="profile"
 							src={JattLogo}
@@ -23,7 +24,7 @@ const Header = () => {
 							alt="Jati Sri Pamungkas"
 							className="cursor-pointer"
 						/>
-					</a>
+					</Link>
 					<Button
 						variant="ghost"
 						size="icon"
@@ -33,7 +34,7 @@ const Header = () => {
 						<Menu className="!w-7 !h-7" />
 					</Button>
 				</div>
-				<nav className="flex items-center gap-10 mt-12">
+				<nav className="flex items-center gap-10">
 					<Button
 						size="icon"
 						className="bg-transparent text-jati-3 p-2 cursor-pointer hover:bg-transparent hidden"
