@@ -54,3 +54,6 @@ app.get("/api/projects", async (req, res) => {
 app.listen(PORT, () => {
 	console.log(`Listening at http://localhost:${PORT}`);
 });
+
+// Wajib ada agar Vercel bisa menjalankan backend
+module.exports = app;
