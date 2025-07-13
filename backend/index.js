@@ -12,8 +12,6 @@ app.use(cors());
 app.use(express.json());
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 
-const PORT = 3000;
-
 // Endpoint API yang akan mengambil data dari Database
 app.get("/api/education", async (req, res) => {
 	try {
@@ -49,10 +47,6 @@ app.get("/api/projects", async (req, res) => {
 	} catch (error) {
 		res.status(500).json({ error: "Failed to get Projects data" });
 	}
-});
-
-app.listen(PORT, () => {
-	console.log(`Listening at http://localhost:${PORT}`);
 });
 
 // Wajib ada agar Vercel bisa menjalankan backend
