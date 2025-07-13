@@ -25,14 +25,22 @@ const Header = () => {
 							className="cursor-pointer"
 						/>
 					</Link>
-					<Button
-						variant="ghost"
-						size="icon"
-						onClick={() => setIsShow(!isShow)}
-						className="p-2 active:bg-jati-5 active:text-white cursor-pointer"
-					>
-						<Menu className="!w-7 !h-7" />
-					</Button>
+					<div className="flex gap-8">
+						<Button
+							size="icon"
+							className="bg-transparent text-jati-3 p-2 cursor-pointer hover:bg-transparent"
+						>
+							<MoonStar className="!w-7 !h-7" />
+						</Button>
+						<Button
+							variant="ghost"
+							size="icon"
+							onClick={() => setIsShow(!isShow)}
+							className="p-2 active:bg-jati-5 active:text-white cursor-pointer"
+						>
+							<Menu className="!w-7 !h-7" />
+						</Button>
+					</div>
 				</div>
 				<nav className="flex items-center gap-10">
 					<Button

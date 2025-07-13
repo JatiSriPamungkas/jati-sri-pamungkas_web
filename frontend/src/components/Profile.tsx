@@ -35,7 +35,7 @@ const Profile = () => {
 							journey&apos;s not over yet, but I&apos;m proud of how far I&apos;ve
 							come.
 						</p>
-						<div className="flex flex-col gap-8 font-semibold">
+						<div className="flex flex-col gap-8">
 							<ActionButton type="cta">
 								Contact Me <Phone />
 							</ActionButton>
@@ -62,7 +62,7 @@ const Profile = () => {
 					</div>
 				</div>
 
-				<div className="flex flex-col gap-8 justify-between mt-8">
+				<div className="flex flex-col gap-8 justify-between mt-8 mb-16">
 					<div className="ml-4 flex font-bold text-lg gap-12 items-center">
 						<span className="text-5xl">2+</span>Years of <br /> Programming
 					</div>

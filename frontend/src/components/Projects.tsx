@@ -34,11 +34,8 @@ const Projects = () => {
 
 	return (
 		<>
-			<div>
-				<h1
-					id="project"
-					className="mt-40 flex justify-center text-3xl font-bold gap-2 tracking-wider"
-				>
+			<div id="project">
+				<h1 className="pt-16 flex justify-center text-3xl font-bold gap-2 tracking-wider">
 					Personal{" "}
 					<span className="px-2 py-1 bg-jati-1 rounded-[5px] text-white">Projects</span>
 				</h1>

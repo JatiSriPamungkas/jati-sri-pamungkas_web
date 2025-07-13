@@ -84,11 +84,8 @@ const Skills = () => {
 
 	return (
 		<>
-			<div>
-				<h1
-					id="skills"
-					className="mt-40 flex justify-center text-3xl font-bold gap-2 tracking-wider"
-				>
+			<div id="skills" className="pt-16">
+				<h1 className="flex justify-center text-3xl font-bold gap-2 tracking-wider">
 					My <span className="bg-jati-1 px-2 py-1 rounded-[5px] text-white">Skills</span>
 				</h1>
 

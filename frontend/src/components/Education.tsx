@@ -31,14 +31,14 @@ const Education = () => {
 
 	return (
 		<>
-			<div className="mt-32 grid gap-16">
+			<div id="education" className="pt-16 grid gap-16 mb-16">
 				<div>
-					<h1 id="education" className="text-3xl font-bold tracking-wider">
+					<h1 className="text-3xl font-bold tracking-wider">
 						<span className="bg-jati-1 rounded-[5px] text-white">Edu</span>
 						cation
 					</h1>
 
-					{/* {educationHistory.map((item, index) => {
+					{educationHistory.map((item, index) => {
 						return (
 							<div
 								key={index}
@@ -51,7 +51,7 @@ const Education = () => {
 								<h1>{item.period}</h1>
 							</div>
 						);
-					})} */}
+					})}
 
 					<EducationCard
 						period="2023 - NOW"
