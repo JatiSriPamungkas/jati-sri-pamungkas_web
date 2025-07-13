@@ -35,6 +35,7 @@ const Education = () => {
 	const fetchOrganizationHistory = useCallback(async () => {
 		try {
 			const response = await axios.get(API_URL_ORGANIZATIONS);
+			console.log(response.data);
 			setOrganizationHistory(response.data);
 		} catch (error) {
 			console.error("Gagal mengambil data pendidikan:", error);

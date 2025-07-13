@@ -12,6 +12,14 @@ app.use(cors());
 app.use(express.json());
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 
+app.get("/", async (req, res) => {
+	try {
+		res.status(200).send("Welcome to the Backend Side!");
+	} catch (error) {
+		res.status(500).json({ error: "Failed to get Education data", errMessage: error });
+	}
+});
+
 // Endpoint API yang akan mengambil data dari Database
 app.get("/api/education", async (req, res) => {
 	try {
@@ -47,6 +55,10 @@ app.get("/api/projects", async (req, res) => {
 	} catch (error) {
 		res.status(500).json({ error: "Failed to get Projects data" });
 	}
+});
+
+app.listen(3000, () => {
+	console.log("https://localhost:3000");
 });
 
 // Wajib ada agar Vercel bisa menjalankan backend
