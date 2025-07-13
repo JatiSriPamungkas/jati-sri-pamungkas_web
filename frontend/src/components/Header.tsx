@@ -11,14 +11,14 @@ const Header = () => {
 	return (
 		<>
 			<header
+				id="profile"
 				className={`${
-					isShow ? "h-110" : "h-30"
+					isShow ? "h-105" : "h-30"
 				} border-b-2 flex flex-col justify-between px-8 py-6 transition-all duration-500 overflow-hidden`}
 			>
 				<div className="w-full flex justify-between items-center mb-8">
 					<Link to="/">
 						<img
-							id="profile"
 							src={JattLogo}
 							width={75}
 							alt="Jati Sri Pamungkas"
@@ -43,6 +43,7 @@ const Header = () => {
 					</Button>
 					<ListHoverNavbar
 						listHoverNavbar={["Profile", "Skills", "Education", "Project", "Contact"]}
+						isHeader={true}
 					/>
 				</nav>
 			</header>

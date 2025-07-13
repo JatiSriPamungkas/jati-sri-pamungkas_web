@@ -1,8 +1,9 @@
 type listHoverNavbarSchema = {
 	listHoverNavbar: string[];
+	isHeader: boolean;
 };
 
-const ListHoverNavbar = ({ listHoverNavbar }: listHoverNavbarSchema) => {
+const ListHoverNavbar = ({ listHoverNavbar, isHeader }: listHoverNavbarSchema) => {
 	const getPathName = ({ pathName }: { pathName: string }) => {
 		const pathNameToLower = pathName.toLowerCase();
 
@@ -13,7 +14,11 @@ const ListHoverNavbar = ({ listHoverNavbar }: listHoverNavbarSchema) => {
 
 	return (
 		<>
-			<ul className="flex flex-col gap-8 font-semibold text-[18px]">
+			<ul
+				className={`flex flex-col ${
+					isHeader ? "gap-8" : "gap-4"
+				} font-semibold text-[18px]`}
+			>
 				{listHoverNavbar.map((list, i) => {
 					return (
 						<li

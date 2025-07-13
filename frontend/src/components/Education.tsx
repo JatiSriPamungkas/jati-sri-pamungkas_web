@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
+import EducationCard from "./EducationCard";
 
 type EducationSchema = {
 	institution: string;
@@ -30,14 +31,14 @@ const Education = () => {
 
 	return (
 		<>
-			<div className="grid mt-40">
+			<div className="mt-32 grid gap-16">
 				<div>
-					<h1 id="education" className="text-5xl font-bold tracking-wider">
+					<h1 id="education" className="text-3xl font-bold tracking-wider">
 						<span className="bg-jati-1 rounded-[5px] text-white">Edu</span>
 						cation
 					</h1>
 
-					{educationHistory.map((item, index) => {
+					{/* {educationHistory.map((item, index) => {
 						return (
 							<div
 								key={index}
@@ -50,30 +51,36 @@ const Education = () => {
 								<h1>{item.period}</h1>
 							</div>
 						);
-					})}
+					})} */}
 
-					<div className="mt-12 flex flex-col w-150 h-60 border-2 items-center justify-evenly font-semibold text-2xl rounded-[10px] shadow-[4px_4px_15px_3px_rgba(0,0,0,0.25)]">
-						<h1 className="text-4xl text-jati-1 font-bold">2020 -2023</h1>
-						<h1>SMA Negeri 1 Simo</h1>
-						<h1>93,33 last average point exam</h1>
-					</div>
-					<div className="mt-12 flex flex-col w-150 h-60 border-2 items-center justify-evenly font-semibold text-2xl rounded-[10px] shadow-[4px_4px_15px_3px_rgba(0,0,0,0.25)]">
-						<h1 className="text-4xl text-jati-1 font-bold">2023 - NOW</h1>
-						<h1>University of AMIKOM Yogyakarta</h1>
-						<h1>Faculty of Computer Science</h1>
-						<h1>GPA 3.97 out of 3 semester</h1>
-					</div>
+					<EducationCard
+						period="2023 - NOW"
+						institution="University of AMIKOM Yogyakarta"
+						major="S1 - Informatics"
+					/>
+					<EducationCard
+						period="2020 - 2023"
+						institution="SMA Negeri 1 Simo"
+						major="MIPA"
+					/>
+					<EducationCard
+						period="2017 - 2020"
+						institution="SMPIT Al-Falaah Simo"
+						major="Quran & Hadits"
+					/>
 				</div>
 
 				<div className="flex flex-col">
-					<h1 className="text-5xl font-bold tracking-wider">
+					<h1 className="text-3xl font-bold tracking-wider">
 						<span className="bg-jati-1 rounded-[5px] text-white">Organiz</span>
 						ation
 					</h1>
-					<div className="mt-12 flex flex-col w-150 h-60 border-2 items-center justify-evenly font-semibold text-2xl rounded-[10px] shadow-[4px_4px_15px_3px_rgba(0,0,0,0.25)]">
-						<h1 className="text-4xl text-jati-1 font-bold">2020 -2023</h1>
-						<h1>English Fun Club (EFC)</h1>
-					</div>
+
+					<EducationCard
+						period="2023"
+						institution="English Fun Club (EFC)"
+						major="Security Department"
+					/>
 				</div>
 			</div>
 		</>

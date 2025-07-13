@@ -37,13 +37,13 @@ const Projects = () => {
 			<div>
 				<h1
 					id="project"
-					className="mt-40 flex justify-center text-5xl font-bold gap-2 tracking-wider"
+					className="mt-40 flex justify-center text-3xl font-bold gap-2 tracking-wider"
 				>
 					Personal{" "}
 					<span className="px-2 py-1 bg-jati-1 rounded-[5px] text-white">Projects</span>
 				</h1>
 
-				<div className="grid grid-cols-2 p-4">
+				<div className="grid p-4">
 					<ProjectCard
 						urlImage={TaskMaster}
 						title="Task Master"

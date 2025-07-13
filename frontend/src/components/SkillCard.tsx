@@ -7,7 +7,7 @@ const SkillCard = ({ src, title, children }: { src: string; title: string; child
 				<img src={src} alt="Skill Logo" className="pt-14 w-[200px]" />
 				<div className="absolute bottom-0 w-full flex items-end justify-between p-8 h-[80%] bg-gradient-to-t from-black/50  to-white/0 rounded-[10px] text-white">
 					<div className="w-[90%] flex flex-col gap-4">
-						<h1 className="font-bold text-3xl">{title}</h1>
+						<h1 className="font-bold text-2xl">{title}</h1>
 						<p className="text-lg">{children}</p>
 					</div>
 					<ChevronRight className="!w-10 !h-10" />

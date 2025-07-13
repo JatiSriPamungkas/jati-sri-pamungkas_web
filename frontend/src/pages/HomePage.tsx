@@ -1,7 +1,7 @@
 import Profile from "@/components/Profile";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
-// import Projects from "@/components/Projects";
+import Projects from "@/components/Projects";
 
 const HomePage = () => {
 	return (
@@ -10,7 +10,7 @@ const HomePage = () => {
 				<Profile />
 				<Skills />
 				<Education />
-				{/* <Projects /> */}
+				<Projects />
 			</div>
 		</>
 	);

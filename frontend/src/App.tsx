@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFound";
 import Header from "./components/Header";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import TestingPage from "./pages/TestingPage";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 					<Route path="/testing" element={<TestingPage />} />
 					<Route path="/*" element={<NotFoundPage />} />
 				</Routes>
-				{/* <Footer /> */}
+				<Footer />
 			</div>
 		</>
 	);
