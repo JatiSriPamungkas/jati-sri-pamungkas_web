@@ -43,9 +43,12 @@ const Education = () => {
 
 	return (
 		<>
-			<div id="education" className="pt-16 grid gap-16 mb-16">
+			<div
+				id="education"
+				className="pt-16 grid gap-16 mb-16 min-[1025px]:grid-cols-2 min-[1025px]:pt-32"
+			>
 				<div>
-					<h1 className="text-3xl font-bold tracking-wider">
+					<h1 className="text-3xl font-bold tracking-wider min-[1025px]:text-5xl">
 						<span className="bg-jati-1 rounded-[5px] text-white">Edu</span>
 						cation
 					</h1>
@@ -63,7 +66,7 @@ const Education = () => {
 				</div>
 
 				<div className="flex flex-col">
-					<h1 className="text-3xl font-bold tracking-wider">
+					<h1 className="text-3xl font-bold tracking-wider min-[1025px]:text-5xl">
 						<span className="bg-jati-1 rounded-[5px] text-white">Organiz</span>
 						ation
 					</h1>
