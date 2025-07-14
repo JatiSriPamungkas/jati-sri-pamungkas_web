@@ -34,7 +34,7 @@ const Skills = () => {
 					My <span className="bg-jati-1 px-2 py-1 rounded-[5px] text-white">Skills</span>
 				</h1>
 
-				<div className="mt-16 grid gap-16">
+				<div className="mt-16 grid gap-16 min-[769px]:grid-cols-2 min-[1025px]:grid-cols-3">
 					{skills.map((skill) => {
 						return (
 							<SkillCard key={skill.id} src={skill.src} title={skill.title}>
