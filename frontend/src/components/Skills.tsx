@@ -1,6 +1,7 @@
 import SkillCard from "./SkillCard";
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 type SkillsSchema = {
 	id: number;
@@ -34,7 +35,13 @@ const Skills = () => {
 					My <span className="bg-jati-1 px-2 py-1 rounded-[5px] text-white">Skills</span>
 				</h1>
 
-				<div className="mt-16 grid gap-16 min-[769px]:grid-cols-2 min-[1025px]:grid-cols-3">
+				<motion.div
+					className="mt-16 grid gap-16 min-[769px]:grid-cols-2 min-[1025px]:grid-cols-3"
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }}
+				>
 					{skills.map((skill) => {
 						return (
 							<SkillCard key={skill.id} src={skill.src} title={skill.title}>
@@ -42,7 +49,7 @@ const Skills = () => {
 							</SkillCard>
 						);
 					})}
-				</div>
+				</motion.div>
 			</div>
 		</>
 	);

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import EducationCard from "./EducationCard";
+import { motion } from "framer-motion";
 
 type EducationSchema = {
 	id: number;
@@ -53,16 +54,23 @@ const Education = () => {
 						cation
 					</h1>
 
-					{educationHistory.map((education) => {
-						return (
-							<EducationCard
-								key={education.id}
-								period={education.period}
-								institution={education.institution}
-								major={education.major}
-							/>
-						);
-					})}
+					<motion.div
+						initial={{ opacity: 0, y: 100 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+						viewport={{ once: true, amount: 0.2 }}
+					>
+						{educationHistory.map((education) => {
+							return (
+								<EducationCard
+									key={education.id}
+									period={education.period}
+									institution={education.institution}
+									major={education.major}
+								/>
+							);
+						})}
+					</motion.div>
 				</div>
 
 				<div className="flex flex-col">
@@ -70,16 +78,24 @@ const Education = () => {
 						<span className="bg-jati-1 rounded-[5px] text-white">Organiz</span>
 						ation
 					</h1>
-					{organizationHistory.map((organization) => {
-						return (
-							<EducationCard
-								key={organization.id}
-								period={organization.period}
-								institution={organization.institution}
-								major={organization.major}
-							/>
-						);
-					})}
+
+					<motion.div
+						initial={{ opacity: 0, y: 100 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+						viewport={{ once: true, amount: 0.2 }}
+					>
+						{organizationHistory.map((organization) => {
+							return (
+								<EducationCard
+									key={organization.id}
+									period={organization.period}
+									institution={organization.institution}
+									major={organization.major}
+								/>
+							);
+						})}
+					</motion.div>
 				</div>
 			</div>
 		</>

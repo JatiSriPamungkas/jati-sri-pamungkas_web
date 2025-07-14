@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 type ProjectsSchema = {
 	id: number;
@@ -37,7 +38,13 @@ const Projects = () => {
 					<span className="px-2 py-1 bg-jati-1 rounded-[5px] text-white">Projects</span>
 				</h1>
 
-				<div className="grid min-[1025px]:grid-cols-2 min-[1025px]:gap-16">
+				<motion.div
+					className="grid min-[1025px]:grid-cols-2 min-[1025px]:gap-16"
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.2 }}
+					viewport={{ once: true, amount: 0.2 }}
+				>
 					{projects.map((project) => {
 						return (
 							<ProjectCard
@@ -50,7 +57,7 @@ const Projects = () => {
 							</ProjectCard>
 						);
 					})}
-				</div>
+				</motion.div>
 			</div>
 		</>
 	);
