@@ -20,7 +20,7 @@ const Profile = () => {
 								I'm Jati
 							</span>
 						</h1>
-						<p className="mt-2 leading-relaxed text-[14px]">
+						<p className="mt-2 leading-relaxed text-[14px] min-[1025px]:text-[18px]">
 							My name is Jati Sri Pamungkas, I&apos;m so interest with programming
 							world. It all started with a random TikTok video that simply explained
 							programming. I never thought that moment would lead me here. What began
@@ -58,12 +58,12 @@ const Profile = () => {
 					</div>
 				</div>
 
-				<div className="flex flex-col gap-8 justify-between mt-8 mb-16 min-[1025px]:flex-row">
-					<div className="ml-4 flex font-bold text-lg gap-12 items-center min-[1025px]:text-2xl">
+				<div className="w-full grid grid-cols-1 gap-8 justify-between mt-8 mb-16 min-[1025px]:grid-cols-3">
+					<div className="ml-4 flex font-bold text-lg gap-12 items-center min-[1025px]:text-2xl min-[1025px]:ml-0 min-[1025px]:gap-6">
 						<span className="text-5xl min-[1025px]:text-7xl">2+</span>Years of <br />{" "}
 						Programming
 					</div>
-					<div className="ml-4 flex font-bold text-lg gap-6 items-center min-[1025px]:text-2xl">
+					<div className="ml-4 flex font-bold text-lg gap-6 items-center min-[1025px]:text-2xl min-[1025px]:ml-0">
 						<span className="text-5xl min-[1025px]:text-7xl">10+</span>Completed Project{" "}
 						<br /> on Github
 					</div>
