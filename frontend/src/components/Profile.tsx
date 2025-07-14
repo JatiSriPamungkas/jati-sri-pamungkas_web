@@ -8,12 +8,12 @@ const Profile = () => {
 	return (
 		<>
 			<main className="mt-6 flex flex-col gap-8">
-				<div className="flex flex-col justify-between">
-					<div className=" flex flex-col justify-evenly gap-8">
+				<div className="flex flex-col justify-between min-[769px]:flex-row min-[769px]:items-center">
+					<div className=" flex flex-col justify-evenly gap-8 min-[1025px]:w-[50%]">
 						<div className="min-[1025px]:hidden">
 							<img src={JatiSriPamungkas} alt="Jati Sri Pamungkas" />
 						</div>
-						<h1 className="font-bold text-4xl leading-tight">
+						<h1 className="font-bold text-4xl leading-tight min-[1025px]:text-6xl">
 							Hey There,{" "}
 							<span className="text-jati-1">
 								<br />
@@ -31,7 +31,7 @@ const Profile = () => {
 							journey&apos;s not over yet, but I&apos;m proud of how far I&apos;ve
 							come.
 						</p>
-						<div className="flex flex-col gap-8">
+						<div className="flex flex-col gap-8 min-[1025px]:flex-row">
 							<ActionButton type="cta">
 								Contact Me <Phone />
 							</ActionButton>
@@ -53,17 +53,19 @@ const Profile = () => {
 						<img
 							src={JatiSriPamungkas}
 							alt="Jati Sri Pamungkas"
-							className="hidden sm:block"
+							className="hidden min-[1025px]:block"
 						/>
 					</div>
 				</div>
 
-				<div className="flex flex-col gap-8 justify-between mt-8 mb-16">
-					<div className="ml-4 flex font-bold text-lg gap-12 items-center">
-						<span className="text-5xl">2+</span>Years of <br /> Programming
+				<div className="flex flex-col gap-8 justify-between mt-8 mb-16 min-[1025px]:flex-row">
+					<div className="ml-4 flex font-bold text-lg gap-12 items-center min-[1025px]:text-2xl">
+						<span className="text-5xl min-[1025px]:text-7xl">2+</span>Years of <br />{" "}
+						Programming
 					</div>
-					<div className="ml-4 flex font-bold text-lg gap-6 items-center">
-						<span className="text-5xl">10+</span>Completed Project <br /> on Github
+					<div className="ml-4 flex font-bold text-lg gap-6 items-center min-[1025px]:text-2xl">
+						<span className="text-5xl min-[1025px]:text-7xl">10+</span>Completed Project{" "}
+						<br /> on Github
 					</div>
 					<div className="flex flex-col items-center justify-between w-full py-2 border-2 border-jati-1 font-bold text-2xl rounded-[7px]">
 						Lab Assistant
