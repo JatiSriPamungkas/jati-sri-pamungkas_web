@@ -13,7 +13,10 @@ const Profile = () => {
 						<div className="min-[1025px]:hidden">
 							<img src={JatiSriPamungkas} alt="Jati Sri Pamungkas" />
 						</div>
-						<h1 className="font-bold text-4xl leading-tight min-[1025px]:text-6xl">
+						<h1
+							id="profile"
+							className="font-bold text-4xl leading-tight scroll-mt-999 min-[1025px]:text-6xl"
+						>
 							Hey There,{" "}
 							<span className="text-jati-1">
 								<br />

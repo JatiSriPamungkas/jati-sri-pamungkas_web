@@ -31,7 +31,7 @@ const Projects = () => {
 
 	return (
 		<>
-			<div id="project">
+			<div id="project" className="scroll-mt-20">
 				<h1 className="pt-16 flex justify-center text-3xl font-bold gap-2 tracking-wider min-[1025px]:text-5xl">
 					Personal{" "}
 					<span className="px-2 py-1 bg-jati-1 rounded-[5px] text-white">Projects</span>

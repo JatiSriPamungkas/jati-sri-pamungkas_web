@@ -8,13 +8,16 @@ import { Link } from "react-router";
 const Header = () => {
 	const [isShow, setIsShow] = useState<boolean>(false);
 
+	const handelOnClick = (setOnClick: boolean) => {
+		setIsShow(setOnClick);
+	};
+
 	return (
 		<>
 			<header
-				id="profile"
 				className={`${
 					isShow ? "h-105 min-[769px]:h-30" : "h-30"
-				} border-b-2 flex flex-col justify-between px-8 py-6 transition-all duration-500 overflow-hidden min-[769px]:border-none min-[769px]:flex-row min-[769px]:m-auto min-[769px]:w-[78%]`}
+				} sticky top-0 bg-transparent backdrop-blur-lg border-b-2 flex flex-col justify-between px-8 py-6 transition-all duration-500 overflow-hidden z-10 min-[769px]:border-none min-[769px]:flex-row min-[769px]:m-auto min-[769px]:w-[78%]`}
 			>
 				<div className="w-full flex justify-between items-center mb-8 min-[769px]:mb-0">
 					<Link to="/">
@@ -52,6 +55,7 @@ const Header = () => {
 					<ListHoverNavbar
 						listHoverNavbar={["Profile", "Skills", "Education", "Project", "Contact"]}
 						isHeader={true}
+						toogleFunc={handelOnClick}
 					/>
 				</nav>
 			</header>

@@ -45,7 +45,7 @@ const Education = () => {
 		<>
 			<div
 				id="education"
-				className="pt-16 grid gap-16 mb-16 min-[1025px]:grid-cols-2 min-[1025px]:pt-32"
+				className="pt-16 grid gap-16 mb-16 min-[1025px]:grid-cols-2 scroll-mt-20 min-[1025px]:pt-32"
 			>
 				<div>
 					<h1 className="text-3xl font-bold tracking-wider min-[1025px]:text-5xl">

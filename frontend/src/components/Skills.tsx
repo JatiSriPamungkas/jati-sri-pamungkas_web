@@ -29,7 +29,7 @@ const Skills = () => {
 
 	return (
 		<>
-			<div id="skills" className="pt-16">
+			<div id="skills" className="pt-16 scroll-mt-20">
 				<h1 className="flex justify-center text-3xl font-bold gap-2 tracking-wider min-[1025px]:text-5xl">
 					My <span className="bg-jati-1 px-2 py-1 rounded-[5px] text-white">Skills</span>
 				</h1>

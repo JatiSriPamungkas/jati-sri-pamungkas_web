@@ -1,9 +1,10 @@
 type listHoverNavbarSchema = {
 	listHoverNavbar: string[];
 	isHeader: boolean;
+	toogleFunc: (toogle: boolean) => void;
 };
 
-const ListHoverNavbar = ({ listHoverNavbar, isHeader }: listHoverNavbarSchema) => {
+const ListHoverNavbar = ({ listHoverNavbar, isHeader, toogleFunc }: listHoverNavbarSchema) => {
 	const getPathName = ({ pathName }: { pathName: string }) => {
 		const pathNameToLower = pathName.toLowerCase();
 
@@ -23,6 +24,7 @@ const ListHoverNavbar = ({ listHoverNavbar, isHeader }: listHoverNavbarSchema) =
 					return (
 						<li
 							key={i}
+							onClick={() => toogleFunc(false)}
 							className="cursor-pointer underline-offset-16 decoration-jati-1 hover:text-jati-1 hover:underline active:text-jati-1 active:underline transition-all"
 						>
 							<a href={getPathName({ pathName: list })}>{list}</a>
