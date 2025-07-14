@@ -10,12 +10,8 @@ const Profile = () => {
 			<main className="mt-6 flex flex-col gap-8">
 				<div className="flex flex-col justify-between">
 					<div className=" flex flex-col justify-evenly gap-8">
-						<div className="min-[426px]:hidden">
-							<img
-								src={JatiSriPamungkas}
-								alt="Jati Sri Pamungkas"
-								className="sm:hidden"
-							/>
+						<div className="min-[1025px]:hidden">
+							<img src={JatiSriPamungkas} alt="Jati Sri Pamungkas" />
 						</div>
 						<h1 className="font-bold text-4xl leading-tight">
 							Hey There,{" "}

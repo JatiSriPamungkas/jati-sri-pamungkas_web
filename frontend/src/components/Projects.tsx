@@ -37,7 +37,7 @@ const Projects = () => {
 					<span className="px-2 py-1 bg-jati-1 rounded-[5px] text-white">Projects</span>
 				</h1>
 
-				<div className="grid p-4">
+				<div className="grid">
 					{projects.map((project) => {
 						return (
 							<ProjectCard

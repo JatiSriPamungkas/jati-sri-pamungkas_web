@@ -17,7 +17,7 @@ const ListHoverNavbar = ({ listHoverNavbar, isHeader }: listHoverNavbarSchema) =
 			<ul
 				className={`flex flex-col ${
 					isHeader ? "gap-8" : "gap-4"
-				} font-semibold text-[18px]`}
+				} font-semibold text-[18px] min-[769px]:flex-row min-[769px]:gap-12 min-[769px]:pl-6`}
 			>
 				{listHoverNavbar.map((list, i) => {
 					return (
