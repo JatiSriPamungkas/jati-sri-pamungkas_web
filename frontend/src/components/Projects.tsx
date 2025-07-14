@@ -32,12 +32,12 @@ const Projects = () => {
 	return (
 		<>
 			<div id="project">
-				<h1 className="pt-16 flex justify-center text-3xl font-bold gap-2 tracking-wider">
+				<h1 className="pt-16 flex justify-center text-3xl font-bold gap-2 tracking-wider min-[1025px]:text-5xl">
 					Personal{" "}
 					<span className="px-2 py-1 bg-jati-1 rounded-[5px] text-white">Projects</span>
 				</h1>
 
-				<div className="grid">
+				<div className="grid min-[1025px]:grid-cols-2 min-[1025px]:gap-16">
 					{projects.map((project) => {
 						return (
 							<ProjectCard
