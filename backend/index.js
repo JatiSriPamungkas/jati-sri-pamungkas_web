@@ -7,6 +7,7 @@ const cors = require("cors");
 const { sql } = require("@vercel/postgres");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -57,8 +58,8 @@ app.get("/api/projects", async (req, res) => {
 	}
 });
 
-app.listen(3000, () => {
-	console.log("https://localhost:3000");
+app.listen(PORT, () => {
+	console.log(`Listening at http://localhost:${PORT}`);
 });
 
 // Wajib ada agar Vercel bisa menjalankan backend
